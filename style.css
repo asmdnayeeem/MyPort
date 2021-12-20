@@ -137,9 +137,18 @@ body{
     overflow-y: hidden;
     top: 0;
     left: 0;
-    
-    
 }
+@media (max-height:532px){
+    #welcome{
+      font-size: 90px;
+    }
+    #home{
+      margin-top: 2%;
+  }
+    #contact{
+        margin-top: 12%;
+    }
+  }
 #contact::before{
     content: "";
     height: 130px;
