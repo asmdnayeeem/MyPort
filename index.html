@@ -1,102 +1,128 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title></title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Corinthia:wght@700&family=Dancing+Script:wght@700&family=Shalimar&family=Ubuntu+Mono&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Ubuntu+Mono&display=swap" rel="stylesheet">
-</head>
-<body>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Corinthia:wght@700&family=Dancing+Script:wght@700&family=Shalimar&family=Ubuntu+Mono&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Ubuntu+Mono&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
     <nav id="navbar">
-        <ul>
-            <li><a onclick="openH()" class="sk">Home</a></li>
-            <li><a onclick="showS()" class="sk">My Skills</a></li>
-            <li><a onclick="openA()" class="sk">About</a></li>
-            <li><a onclick="openBox()" class="sk">contact</a></li>
-        </ul>
-        <script>
-            function openBox(){
-                document.getElementById("contact").style.width="71px"; 
-                document.getElementById("welcome").style.display="flex";
-                document.getElementById("skills").style.width="0%";
-                document.body.style.overflow="hidden";
-                document.getElementById("about").style.height="0%";
+      <ul>
+        <li><a onclick="openH()" class="sk">Home</a></li>
+        <li><a onclick="showS()" class="sk">My Skills</a></li>
+        <li><a onclick="openA()" class="sk">About</a></li>
+        <li><a onclick="openBox()" class="sk">contact</a></li>
+      </ul>
+      <script>
+        function openBox() {
+          document.getElementById("contact").style.width = "71px";
+          document.getElementById("welcome").style.display = "flex";
+          document.getElementById("skills").style.width = "0%";
+          document.body.style.overflow = "hidden";
+          document.getElementById("about").style.height = "0%";
+        }
+        function showS() {
+          document.getElementById("skills").style.width = "100%";
+          document.getElementById("contact").style.width = "0%";
+          document.getElementById("about").style.width = "0%";
+          document.getElementById("cross").style.visibility = "hidden";
+          document.getElementById("welcome").style.display = "none";
 
-            }
-            function showS(){
-                document.getElementById("skills").style.width="100%";
-                document.getElementById("contact").style.width="0%"; 
-                document.getElementById("about").style.width="0%";
-                document.getElementById("cross").style.visibility="hidden";
-                document.getElementById("welcome").style.display="none";
+          document.body.style.overflow = "auto";
+        }
+        function openA() {
+          document.getElementById("skills").style.width = "0%";
+          document.getElementById("contact").style.width = "0%";
+          document.getElementById("about").style.height = "100%";
+          document.getElementById("about").style.width = "100%";
+          document.getElementById("cross").style.visibility = "visible";
+          document.body.style.overflow = "hidden";
+          document.getElementById("welcome").style.display = "none";
+        }
+        function closeA() {
+          document.getElementById("about").style.height = "0%";
+          document.getElementById("about").style.width = "0%";
+          document.getElementById("cross").style.visibility = "hidden";
+          document.getElementById("welcome").style.display = "flex";
+        }
+        function openH() {
+          document.getElementById("about").style.height = "0%";
+          document.getElementById("about").style.width = "0%";
+          document.getElementById("cross").style.visibility = "hidden";
+          document.getElementById("welcome").style.display = "flex";
+          document.getElementById("skills").style.width = "0%";
+          document.getElementById("contact").style.width = "0%";
+          document.body.style.overflow = "hidden";
+        }
 
-                document.body.style.overflow="auto";
-            }
-            function openA(){
-                document.getElementById("skills").style.width="0%";
-                document.getElementById("contact").style.width="0%"; 
-                document.getElementById("about").style.height="100%";
-                document.getElementById("about").style.width="100%";
-                document.getElementById("cross").style.visibility="visible";
-                document.body.style.overflow="hidden";
-                document.getElementById("welcome").style.display="none";
-            }
-            function closeA(){
-                document.getElementById("about").style.height="0%";
-                document.getElementById("about").style.width="0%";
-                document.getElementById("cross").style.visibility="hidden";
-                document.getElementById("welcome").style.display="flex";
+        // window.onscroll = function() {myFunction()};
 
-            }
-            function openH(){
-                document.getElementById("about").style.height="0%";
-                document.getElementById("about").style.width="0%";
-                document.getElementById("cross").style.visibility="hidden";
-                document.getElementById("welcome").style.display="flex";
-                document.getElementById("skills").style.width="0%";
-                document.getElementById("contact").style.width="0%"; 
-                document.body.style.overflow="hidden";
-                }        
-  
-            // window.onscroll = function() {myFunction()};
-
-// function myFunction() {
-//   if (document.body.scrollTop > 50 || document.documentElement.scrollTop > 50) {
-//     document.getElementById("navbar").style.backgroundColor="rgba(0, 0, 0, 0.356)";
-//   } else {
-//     document.getElementById("navbar").style.backgroundColor="none";
-//   } }
-
-        </script>
+        // function myFunction() {
+        //   if (document.body.scrollTop > 50 || document.documentElement.scrollTop > 50) {
+        //     document.getElementById("navbar").style.backgroundColor="rgba(0, 0, 0, 0.356)";
+        //   } else {
+        //     document.getElementById("navbar").style.backgroundColor="none";
+        //   } }
+      </script>
     </nav>
     <div id="about">
-        <a onclick="closeA()" id="cross" >&times;</a>
-        <h1>About me</h1>
+      <a onclick="closeA()" id="cross">&times;</a>
+      <h1>About me</h1>
     </div>
     <div id="home">
-     <!-- <div class="h"><div class="a"> <span class="w">Welcome</span><span class="t">to</span><br><span class="m">my</span><span class="b">Blog</span></div></div> -->
-     <div id="welcome"><p>welcome</p></div>
+      <!-- <div class="h"><div class="a"> <span class="w">Welcome</span><span class="t">to</span><br><span class="m">my</span><span class="b">Blog</span></div></div> -->
+      <div id="welcome">
+        <p >welcome</p>
+        <p></p>
+      </div>
 
-     <!-- <div class="buttons"><button><a href="">Contact</a></button></div> -->
+      <!-- <div class="buttons"><button><a href="">Contact</a></button></div> -->
     </div>
     <div id="contact">
-        <button><a href="https://www.instagram.com/asmdnayeem/" target="blank"><img src="insta.svg" alt="" width="44px" height="44px"></a></button>
-        <button><a href="https://www.facebook.com/as.mahammednayeem/" target="blank"><img src="facebook.svg" alt="" width="44px" height="44px"></a></button>
+      <button>
+        <a href="https://www.instagram.com/asmdnayeem/" target="blank"
+          ><img src="insta.svg" alt="" width="44px" height="44px"
+        /></a>
+      </button>
+      <button>
+        <a href="https://www.facebook.com/as.mahammednayeem/" target="blank"
+          ><img src="facebook.svg" alt="" width="44px" height="44px"
+        /></a>
+      </button>
     </div>
     <div id="skills">
-        <div id="box1" class="box"><img src="html.jpg" width="320px" height="230px"></div>
-        <div id="box2" class="box"><img src="css.png" width="320px" height="230px"></div>
-        <div id="box3" class="box"><img src="js.jfif" width="320px" height="230px"></div>
-        <div id="box4" class="box"><img src="c.jpg" width="320px" height="230px"></div>
-        <div id="box5" class="box"><img src="py.jpg" width="320px" height="230px"></div>
-        <div id="box6" class="box"><img src="java.png" width="320px" height="230px"></div>
+      <div id="box1" class="box">
+        <img src="html.jpg" width="320px" height="230px" />
+      </div>
+      <div id="box2" class="box">
+        <img src="css.png" width="320px" height="230px" />
+      </div>
+      <div id="box3" class="box">
+        <img src="js.jfif" width="320px" height="230px" />
+      </div>
+      <div id="box4" class="box">
+        <img src="c.jpg" width="320px" height="230px" />
+      </div>
+      <div id="box5" class="box">
+        <img src="py.jpg" width="320px" height="230px" />
+      </div>
+      <div id="box6" class="box">
+        <img src="java.png" width="320px" height="230px" />
+      </div>
     </div>
-</body>
+  </body>
 </html>
